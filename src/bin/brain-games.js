@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-console.log('Welcome to the Brain Games!');
-
 import user from '..';
+
+console.log('Welcome to the Brain Games!');
 
 user();
