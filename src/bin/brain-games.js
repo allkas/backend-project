@@ -2,6 +2,4 @@
 
 import user from '..';
 
-console.log('Welcome to the Brain Games!');
-
 user();
