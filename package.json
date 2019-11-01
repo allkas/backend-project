@@ -1,16 +1,18 @@
 {
-  "name": "project",
+  "name": "c",
   "version": "1.0.0",
-  "description": "",
+  "description": "brain-games",
   "main": "index.js",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-games.js"
   },
   "files": [
     "dist"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
   },
