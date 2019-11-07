@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { numRandom } from '..';
+// import { numRandom } from '..';
 
 const welcome = 'Welcome to the Brain Games!';
 const textDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -12,19 +12,18 @@ const esEven = () => {
 };
 export default esEven;
 
+// const number = numRandom(1, 99);
 
-export const number = numRandom(1, 99);
-
-const findOutAnEvenNumber = () => {
-  if (number % 2 === 0) {
-    return true;
-  }
-  return false;
-};
-export const esven = (num) => {
-  const even = compare(num) ? 'yes' : 'no';
-  console.log(even);
-};
-export const evenOrNot = () => {
-  readlineSync.question('Your answer: ');
-};
+// const findOutAnEvenNumber = () => {
+//   if (number % 2 === 0) {
+//     return true;
+//   }
+//   return false;
+// };
+// const esven = (num) => {
+// const even = compare(num) ? 'yes' : 'no';
+//   return even;
+// };
+// const evenOrNot = () => {
+//   readlineSync.question('Your answer: ');
+// };
