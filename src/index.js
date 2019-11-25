@@ -1,10 +1,25 @@
 import readlineSync from 'readline-sync';
 
-export const welcome = 'Welcome to the Brain Games!';
-export const numRandom = Math.floor(Math.random() * 101);
+export default (rules, getDataGame) => {
+  console.log('Welcome to the Brain Games!');
+  console.log(rules);
+  const name = readlineSync.question('\nMay I have your name? ');
+  console.log(`Hello, ${name}!\n`);
+  const numberOfWin = 3;
+  const getGame = (step) => {
+    if (step > numberOfWin) return true;
+    const [expression, correctAnswer] = getDataGame();
+    console.log(`Question: ${expression}`);
+    const answer = readlineSync.question('Your answer: ');
+    if (answer === correctAnswer) {
+      console.log('Correct!');
+    } else {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${name}!`);
+      return false;
+    }
+    return getGame(step + 1);
+  };
 
-export const user = () => {
-  console.log(welcome);
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello ${userName}!`);
+  if (getGame(1)) console.log(`Congratulations, ${name}!`);
 };
