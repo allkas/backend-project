@@ -9,7 +9,7 @@ export default () => {
     const randomNum2 = Math.floor(Math.random() * Math.floor(15));
     const operNum = Math.floor(Math.random() * 3);
     const expression = `${randomNum1} ${operation[operNum]} ${randomNum2}`;
-    const correctAnswer = parseInt(expression);
+    const correctAnswer = parseInt(expression, 10);
     return [expression, correctAnswer];
   };
 

@@ -1,7 +1,7 @@
 import game from '..';
 
 export default () => {
-  const rules = 'Answer "yes" if number even otherwise answer "no".';
+  const text = 'Answer "yes" if number even otherwise answer "no".';
 
   const getDataGame = () => {
     const expression = Math.floor(Math.random() * Math.floor(99));
@@ -9,5 +9,5 @@ export default () => {
     return [expression, correctAnswer];
   };
 
-  game(rules, getDataGame);
+  game(text, getDataGame);
 };
