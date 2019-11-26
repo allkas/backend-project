@@ -10,14 +10,14 @@ export default () => {
     const operNum = Math.floor(Math.random() * 3);
     const expression = `${randomNum1} ${operation[operNum]} ${randomNum2}`;
     const answer = (num1, num2, oper) => {
-      if (String(oper) === '+') {
-        return (randomNum1 + randomNum2);
-      }
-      if (String(oper) === '-') {
-        return (randomNum1 - randomNum2);
-      }
-      if (String(oper) === '*') {
-        return (randomNum1 * randomNum2);
+      switch (oper) {
+        case '+':
+          return randomNum1 + randomNum2;
+        case '-':
+          return randomNum1 - randomNum2;
+        case '*':
+          return randomNum1 * randomNum2;
+        default: return null;
       }
     };
     const correctAnswer = String(answer(randomNum1, randomNum2, operation[operNum]));
