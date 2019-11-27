@@ -1,9 +1,8 @@
-import game from '..';
+import game, { numberRandom } from '..';
 
 export default () => {
   const text = 'What number is missing in the progression?';
 
-  const numberRandom = (min, max) => Math.floor(Math.random() * (max - min) + min);
   const getDataGame = () => {
     const startNum = numberRandom(1, 17);
     const step = numberRandom(2, 5);

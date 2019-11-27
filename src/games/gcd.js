@@ -1,11 +1,11 @@
-import game from '..';
+import game, { numberRandom } from '..';
 
 export default () => {
   const text = 'Find the greatest common divisor of given numbers.';
 
   const getDataGame = () => {
-    const randomNum1 = Math.floor(Math.random() * Math.floor(50));
-    const randomNum2 = Math.floor(Math.random() * Math.floor(50));
+    const randomNum1 = numberRandom(5, 20);
+    const randomNum2 = numberRandom(5, 20);
     const expression = `${randomNum1} ${randomNum2}`;
     const gcd = (num1, num2) => {
       if (num2 === 0) {

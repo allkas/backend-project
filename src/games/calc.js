@@ -1,13 +1,13 @@
-import game from '..';
+import game, { numberRandom } from '..';
 
 export default () => {
   const text = 'What is the result of the expression?';
 
   const getDataGame = () => {
     const operation = ['+', '-', '*'];
-    const randomNum1 = Math.floor(Math.random() * Math.floor(25));
-    const randomNum2 = Math.floor(Math.random() * Math.floor(15));
-    const operNum = Math.floor(Math.random() * 3);
+    const randomNum1 = numberRandom(2, 25);
+    const randomNum2 = numberRandom(2, 15);
+    const operNum = numberRandom(1, 3);
     const expression = `${randomNum1} ${operation[operNum]} ${randomNum2}`;
     const answer = (num1, num2, oper) => {
       switch (oper) {

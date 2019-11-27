@@ -23,3 +23,5 @@ export default (text, getDataGame) => {
 
   if (getGame(1)) console.log(`Congratulations, ${name}!`);
 };
+
+export const numberRandom = (min, max) => Math.floor(Math.random() * (max - min) + min);
