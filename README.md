@@ -7,19 +7,19 @@ brain-games
 
 ### Option 1: Install & run from NPM
 
-$ npm i -g @artperederiy/brain-games
-$ brain-even # run brain-even
-$ brain-calc # run brain-calc
-$ brain-gcd # run brain-gcd
-$ brain-progression # run brain-progression
-$ brain-prime # run brain-prime
+    $ npm i -g @artperederiy/brain-games
+    $ brain-even # run brain-even
+    $ brain-calc # run brain-calc
+    $ brain-gcd # run brain-gcd
+    $ brain-progression # run brain-progression
+    $ brain-prime # run brain-prime
 
 
 ### Option 2: Build & run from git repository
 
-$ git clone git@github.com:allkas/backend-project-lvl1.git
-$ make install
-$ make publish
+    $ git clone git@github.com:allkas/backend-project-lvl1.git
+    $ make install
+    $ make publish
 
 ### Examples
 
