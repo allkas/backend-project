@@ -17,7 +17,6 @@ brain-games
 
 ### Option 2: Build & run from git repository
 
-    $ git clone git@github.com:allkas/backend-project-lvl1.git
     $ make install
     $ make publish
 
