@@ -8,8 +8,8 @@ export default (text, getDataGame) => {
   const numberOfWin = 3;
   const getGame = (step) => {
     if (step > numberOfWin) return true;
-    const [expression, correctAnswer] = getDataGame();
-    console.log(`Question: ${expression}`);
+    const [question, correctAnswer] = getDataGame();
+    console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer === correctAnswer) {
       console.log('Correct!');
@@ -23,5 +23,3 @@ export default (text, getDataGame) => {
 
   if (getGame(1)) console.log(`Congratulations, ${name}!`);
 };
-
-export const numberRandom = (min, max) => Math.floor(Math.random() * (max - min) + min);

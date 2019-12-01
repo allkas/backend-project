@@ -1,11 +1,12 @@
-import game, { numberRandom } from '..';
+import game from '..';
+import numberRandom from '../utils';
 
 export default () => {
   const text = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
   const getDataGame = () => {
     const randomNum = numberRandom(2, 3571);
-    const expression = `${randomNum} `;
+    const question = `${randomNum} `;
     const isPrime = (num) => {
       if (num <= 1) {
         return false;
@@ -18,7 +19,7 @@ export default () => {
       return true;
     };
     const correctAnswer = String(isPrime(randomNum));
-    return [expression, correctAnswer];
+    return [question, correctAnswer];
   };
 
   game(text, getDataGame);
