@@ -1,29 +1,28 @@
 import { cons } from '@hexlet/pairs';
-
 import game from '..';
 import numberRandom from '../utils';
 
-const text = 'What is the result of the expression?';
-const operation = ['+', '-', '*'];
-const randomNum1 = numberRandom(2, 25);
-const randomNum2 = numberRandom(2, 15);
-const operNum = numberRandom(1, operation.length);
+const textDescription = 'What is the result of the expression?';
+const operations = ['+', '-', '*'];
 
 const getDataGame = () => {
-  const question = `${randomNum1} ${operation[operNum]} ${randomNum2}`;
-  const answer = (num1, num2, oper) => {
-    switch (oper) {
+  const operand1 = numberRandom(2, 10);
+  const operand2 = numberRandom(2, 10);
+  const operationsNumbers = numberRandom(1, operations.length - 1);
+  const selectOperation = (num1, num2, operation) => {
+    switch (operation) {
       case '+':
-        return randomNum1 + randomNum2;
+        return operand1 + operand2;
       case '-':
-        return randomNum1 - randomNum2;
+        return operand1 - operand2;
       case '*':
-        return randomNum1 * randomNum2;
+        return operand1 * operand2;
       default: return null;
     }
   };
-  const correctAnswer = String(answer(randomNum1, randomNum2, operation[operNum]));
+  const question = `${operand1} ${operations[operationsNumbers]} ${operand2}`;
+  const correctAnswer = String(selectOperation(operand1, operand2, operations[operationsNumbers]));
   return cons(question, correctAnswer);
 };
 
-export default () => game(text, getDataGame);
+export default () => game(textDescription, getDataGame);
