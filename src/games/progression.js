@@ -3,10 +3,10 @@ import game from '..';
 import numberRandom from '../utils';
 
 const textDescription = 'What number is missing in the progression?';
-const progressionLength = 9;
 const arrayProgression = [];
 
 const getProgression = (num1, num2) => {
+  const progressionLength = 9;
   for (let i = 0; i < progressionLength; i += 1) {
     arrayProgression.push(num1 + num2 * i);
   }
