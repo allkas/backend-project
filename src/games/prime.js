@@ -18,8 +18,7 @@ const isPrime = (num) => {
 };
 
 const getDataGame = () => {
-  const primeNumber = numberRandom(2, 3571);
-  const question = `${primeNumber} `;
+  const question = `${numberRandom(2, 3571)} `;
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return cons(question, correctAnswer);
 };
