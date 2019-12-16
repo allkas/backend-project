@@ -3,9 +3,9 @@ import { car, cdr } from '@hexlet/pairs';
 
 const gamesCount = 3;
 
-export default (textDescription, getDataGame) => {
+export default (description, getDataGame) => {
   console.log('Welcome to the Brain Games!');
-  console.log(textDescription);
+  console.log(description);
 
   const name = readlineSync.question('\nMay I have your name? ');
   console.log(`Hello, ${name}!\n`);

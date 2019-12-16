@@ -1,9 +1,8 @@
 import { cons } from '@hexlet/pairs';
-
 import game from '..';
-import numberRandom from '../utils';
+import getRandomValue from '../utils';
 
-const textDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   if (num <= 1) {
@@ -18,9 +17,9 @@ const isPrime = (num) => {
 };
 
 const getDataGame = () => {
-  const question = `${numberRandom(2, 3571)} `;
+  const question = `${getRandomValue(2, 3571)} `;
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return cons(question, correctAnswer);
 };
 
-export default () => game(textDescription, getDataGame);
+export default () => game(description, getDataGame);

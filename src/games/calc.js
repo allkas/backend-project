@@ -1,11 +1,11 @@
 import { cons } from '@hexlet/pairs';
 import game from '..';
-import numberRandom from '../utils';
+import getRandomValue from '../utils';
 
-const textDescription = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 const operations = ['+', '-', '*'];
-const operand1 = numberRandom(2, 10);
-const operand2 = numberRandom(2, 10);
+const operand1 = getRandomValue(2, 10);
+const operand2 = getRandomValue(2, 10);
 
 const getResult = (num1, num2, operation) => {
   switch (operation) {
@@ -20,10 +20,10 @@ const getResult = (num1, num2, operation) => {
 };
 
 const getDataGame = () => {
-  const randomOperator = numberRandom(1, operations.length - 1);
+  const randomOperator = getRandomValue(1, operations.length - 1);
   const question = `${operand1} ${operations[randomOperator]} ${operand2}`;
   const correctAnswer = String(getResult(operand1, operand2, operations[randomOperator]));
   return cons(question, correctAnswer);
 };
 
-export default () => game(textDescription, getDataGame);
+export default () => game(description, getDataGame);
