@@ -5,7 +5,7 @@ import getRandomValue from '../utils';
 const description = 'What number is missing in the progression?';
 const progressionLength = 10;
 
-const progressionQuestion = (memberProgression, differenceProgression, lengthProgression, question) => {
+const getQuestion = (memberProgression, differenceProgression, lengthProgression, question) => {
   const progression = [];
   for (let i = 0; i < lengthProgression; i += 1) {
     progression.push(memberProgression + differenceProgression * i);
@@ -16,16 +16,16 @@ const progressionQuestion = (memberProgression, differenceProgression, lengthPro
 
 const getDataGame = () => {
   const hiddenMemberIndex = getRandomValue(1, progressionLength - 1);
-  const progressionMember = getRandomValue(1, 17);
+  const startProgressionMember = getRandomValue(1, 17);
   const step = getRandomValue(2, 5);
-  const arithmeticProgression = progressionQuestion(
-    progressionMember,
+  const arithmeticProgression = getQuestion(
+    startProgressionMember,
     step,
     progressionLength,
     hiddenMemberIndex,
   );
   const question = arithmeticProgression;
-  const correctAnswer = (progressionMember + step * hiddenMemberIndex).toString();
+  const correctAnswer = (startProgressionMember + step * hiddenMemberIndex).toString();
   return cons(question, correctAnswer);
 };
 

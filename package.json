@@ -22,6 +22,11 @@
     "type": "git",
     "url": "git+https://github.com/allkas/backend-project-lvl1.git"
   },
+  "keywords": [
+    "hexlet",
+    "1lvl",
+    "first project"
+  ],
   "author": "Aleksey",
   "license": "ISC",
   "bugs": {
